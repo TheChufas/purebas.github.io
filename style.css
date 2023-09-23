@@ -7,5 +7,10 @@ body {
 div.login {
     display: grid;
     align-items: center;
+    justify-items: center;
+}
+form.login {
     background-color: #fff;
+    border-radius: 40px;
+    border: 10px #000;
 }
