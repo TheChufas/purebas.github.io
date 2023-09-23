@@ -1,7 +1,11 @@
+* {
+    font-family: 'Nova Mono', Arial, Helvetica, sans-serif;
+}
 body {
     background-color: coral;
 }
 div.login {
-    display: flexbox;
+    display: grid;
+    align-items: center;
     background-color: #fff;
 }
