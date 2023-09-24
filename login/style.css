@@ -1,0 +1,40 @@
+* {
+    font-family: 'Nova Mono', Arial, Helvetica, sans-serif;
+}
+h2 {
+    margin: 2px;
+}
+body {
+    margin-top: 200px;
+    background-color: coral;
+}
+.login img {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 50vw;
+    transform: translate(-50%);
+    width: 256px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 6px 4px rgba(0, 0, 0, 0.12);
+}
+div.login {
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+}
+form.login {
+    background-color: #fff;
+    border-radius: 40px;
+    border: 10px solid #000; /* Corregido: especificar el tipo de borde */
+    text-align: left; /* Alineación de contenido en el centro */
+    padding: 20px; /* Espacio interno para mayor claridad */
+}
+.login input{
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+}
