@@ -1,6 +1,7 @@
 const contenedor = document.getElementById('botones');
 const compararOrden = document.getElementById('comparar');
 const mostrarIgualdades = document.getElementById('igualdades');
+const mostrarMovimientos = document.getElementById('movimientos');
 var swap = function (x){return x};
 
 function updateButton(button) {
@@ -33,6 +34,7 @@ lista.forEach((objeto, i) => {
 const botones = contenedor.querySelectorAll('button');
 
 //Cambiar botones
+let movimientos = 0;
 let primerBotonSeleccionado;
 
 botones.forEach((boton) => {
@@ -54,7 +56,8 @@ botones.forEach((boton) => {
         updateButton(primerBotonSeleccionado);
         updateButton(e.target);
         primerBotonSeleccionado = null;
-        console.log(listaOrdenada);
+        movimientos++;
+        mostrarMovimientos.innerHTML = 'Movimientos: ' + movimientos;
     }
   });
 });
@@ -75,5 +78,4 @@ compararOrden.addEventListener('click', () => {
     } else {
         mostrarIgualdades.innerHTML = "Completado en " + comparaciones + " comparaciones!";
     }
-
 });

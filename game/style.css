@@ -3,9 +3,24 @@
     font-family: 'PT Sans Narrow';
     text-shadow: 1px 1px 2px black;
 }
-body {
-    top: 30px;
+h2 {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 63px;
+    padding: 4px;
+    z-index: 20;
     text-align: center;
+    transform: translateX(-50%);
+    transform-origin: center;
+    background-color: #6ca01d;
+    border-radius: 10px;
+    box-shadow: 10px 2px 12px 4px rgb(0 0 0 / 47%);
+}
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
     background: linear-gradient(333deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 42%, rgba(252,176,69,1) 74%);
     min-height: 100vh;
 }
@@ -16,36 +31,39 @@ h1{
     box-shadow: 10px 2px 12px 4px black;
 }
 p {
-    font-size: 40px;
+    font-size: 24px;
 }
 .botones {
     position: relative;
     left: 50vw;
     transform: translate(-50%);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3%;
+    flex-wrap: wrap;
     max-width: 700px;
-    flex-direction: row;
     background-color: white;
-    padding: 20px;
     border-radius: 20px;
-}
-.active{
-    transition: 0s;
-    background-color: aqua;
+    padding: 25px;
+    align-content: center;
+    justify-items: center;
+    justify-content: space-evenly;
 }
 .botones button {
-    width: 300px;
+    width: 25%;
+    margin: 10px;
+    max-width: 256px;
     font-size: 0px;
     display: block;
     aspect-ratio: 1;
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
-    border: 0px;
-    transition: 0.8s;
+    border-radius: 10%;
+    transition: 0.5s;
+}
+.active{
+    transition: 0s;
+    transform: scale(105%);
+    border: solid #6ca01d;
 }
 .botones button:hover{
     box-shadow: 0px 0px 1px 1px black;
@@ -53,8 +71,33 @@ p {
 .comparar {
     margin: 10px;
     padding: 20px;
-    background-color: rgb(25, 236, 148);
+    background-color: #19ec94;
     border: 0px;
-    border-radius: 20px;
-    font-size: 24px;
+    border-radius: 20%;
+    font-size: 48px;
+    transition: all 0.3s;
 }
+.comparar:hover {
+    background-color: #20ad73;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 1px 6px 5px 2px black;
+}
+.comparar:active{
+    background-color: #20ad73;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 1px 6px 5px 2px black;
+    transform: translateY(10px);
+}
+@media (max-width: 400px) {
+    body {
+      background: #ffae00;
+    }
+    .botones{
+        top: 10px;
+        padding: 10px;
+    }
+    .comparar{
+        padding: 6px;
+        border-radius: 7px;
+    }
+  }
