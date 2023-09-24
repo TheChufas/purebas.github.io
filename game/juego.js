@@ -2,6 +2,11 @@ const contenedor = document.getElementById('botones');
 const compararOrden = document.getElementById('comparar');
 const mostrarIgualdades = document.getElementById('igualdades');
 var swap = function (x){return x};
+
+function updateButton(button) {
+    button.style.backgroundImage = 'url(img/' + button.innerHTML + '.png)';
+}
+
 //Crear botones
 const objetos = ["manzana", "banana", "naranja", "uva", "sandía"];
 
@@ -22,6 +27,7 @@ lista.forEach((objeto, i) => {
     let node = document.createElement("button")
     node.innerHTML = objeto;
     node.setAttribute('data-index', i);
+    updateButton(node);
     contenedor.appendChild(node)
 })
 const botones = contenedor.querySelectorAll('button');
@@ -45,7 +51,8 @@ botones.forEach((boton) => {
         e.target.innerHTML = placeHolder;
         e.target.dataset.index = iPrimero;
         
-
+        updateButton(primerBotonSeleccionado);
+        updateButton(e.target);
         primerBotonSeleccionado = null;
         console.log(listaOrdenada);
     }
@@ -53,6 +60,7 @@ botones.forEach((boton) => {
 });
 
 //Comparar
+let comparaciones = 0;
 compararOrden.addEventListener('click', () => {
     let coincidencias = 0;
     for (let i = 0; i < lista.length; i++) {
@@ -61,4 +69,11 @@ compararOrden.addEventListener('click', () => {
         }
     }
     mostrarIgualdades.innerHTML = "Numero de coincidencias:" + coincidencias;
+    if(coincidencias !== lista.length){
+        mostrarIgualdades.innerHTML = "Numero de coincidencias: " + coincidencias;
+        comparaciones++;
+    } else {
+        mostrarIgualdades.innerHTML = "Completado en " + comparaciones + " comparaciones!";
+    }
+
 });

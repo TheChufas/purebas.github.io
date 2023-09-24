@@ -1,3 +1,60 @@
+* {
+    color: white;
+    font-family: 'PT Sans Narrow';
+    text-shadow: 1px 1px 2px black;
+}
+body {
+    top: 30px;
+    text-align: center;
+    background: linear-gradient(333deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 42%, rgba(252,176,69,1) 74%);
+    min-height: 100vh;
+}
+h1{
+    background-color: rgb(43, 102, 228);
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 10px 2px 12px 4px black;
+}
+p {
+    font-size: 40px;
+}
+.botones {
+    position: relative;
+    left: 50vw;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    max-width: 700px;
+    flex-direction: row;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
 .active{
+    transition: 0s;
     background-color: aqua;
+}
+.botones button {
+    width: 300px;
+    font-size: 0px;
+    display: block;
+    aspect-ratio: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0px;
+    transition: 0.8s;
+}
+.botones button:hover{
+    box-shadow: 0px 0px 1px 1px black;
+}
+.comparar {
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(25, 236, 148);
+    border: 0px;
+    border-radius: 20px;
+    font-size: 24px;
 }
