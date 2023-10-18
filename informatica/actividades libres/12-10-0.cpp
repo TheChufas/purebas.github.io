@@ -5,6 +5,6 @@ void funcion(int arr[], int N){
     for(int i=0; i<N ; i++)
     {
         //cout << "Ingrese v(" <<i<< "): "; //Es necesario mostrar texto por cada valor?
-        cin << arr[i];
+        cin >> arr[i];
     }
 }

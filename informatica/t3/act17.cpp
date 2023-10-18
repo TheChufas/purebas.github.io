@@ -25,8 +25,8 @@ int main()
 	for(int i = 0; i < M; i++){
 		cout<<A[i];
 		if(i == M-1)
-			return
-		cout<<", ";
+			return;
+		cout << ", ";
 	}
 
     return 0;
