@@ -33,3 +33,7 @@ int main()
     cout << "suma = " << suma;
     return 0;
 }
+
+// referencias
+// https://github.com/fedebenelli
+// https://github.com/SalvadorBrandolin/ReactorD
