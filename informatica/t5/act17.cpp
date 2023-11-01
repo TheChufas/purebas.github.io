@@ -52,7 +52,19 @@ void extrae_diagonal(float M[N][N], float D[N], int n)
 
 void est(float A[N], int n, double &media, double &desviacion)
 {
-    // complete el cuerpo de la funcion
+    double sum = 0;
+    for(int i = 0; i < n; i++)
+    {
+        sum += A[i];
+    }
+    media = sum / n;
+
+    double sq_diff_sum = 0;
+    for(int i = 0; i < n; i++)
+    {
+        sq_diff_sum += (A[i] - media) * (A[i] - media);
+    }
+    desviacion = sqrt(sq_diff_sum / n);
 }
 
 int main()
@@ -64,13 +76,13 @@ int main()
     n = tamanio();
     
     //(1) rellenar la matriz llamando a rellenar_matriz
-    rellenar_matriz(mat, N);
+    rellenar_matriz(mat,n);
 
     //(2) Mostrar matriz llamando a mostrar_matriz
-    mostrar_matriz(mat, N)
-
-    //(3) Extraer la diagonal principal llamando a extrae_diagonal
+    mostrar_matriz(mat, n);
     
+    //(3) Extraer la diagonal principal llamando a extrae_diagonal
+    extrae_diagonal(mat, diag, n);
     cout << endl << "Diagonal: (";
     for(int i=0; i<n; i++)
     {
@@ -82,7 +94,7 @@ int main()
     }
     
     //(4) Calcular la media y la desviación de la diagonal llamando a est
-    
+    est(diag, n, media, desv);
     cout << "La media es: " << media << " y la desviacion es: " << desv; 
     
 }
