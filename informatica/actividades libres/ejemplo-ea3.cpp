@@ -41,7 +41,6 @@ void sumaVectores(double u[NMAX],   double v[NMAX],  double w[NMAX],  int N )
     for (int i = 0; i < N; i++)
         w[i] = u[i] + v[i];
 }
-#pragma incompleto
 
 bool sonTodosMenoresCincuenta(double u[NMAX] ,  int N)
 {
@@ -53,9 +52,13 @@ bool sonTodosMenoresCincuenta(double u[NMAX] ,  int N)
 
 void  mostrarVector(double u[NMAX] ,  int N)
 {
-    
+    for (int i = 0; i < N; i++)
+    {
+        cout << u[i];
+        if(i != N - 1)
+            cout << ',';
+    }
 }
-#pragma endregion
 int main()
 {
     //1
@@ -76,6 +79,6 @@ int main()
         cout << dig[i] << ' ';
 
     //4
-
+    mostrarVector(dig, NMAX);
     return 0;
 }

@@ -3,6 +3,8 @@
         "*.embeddedhtml": "html",
         "iostream": "cpp",
         "ostream": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "format": "cpp",
+        "cmath": "cpp"
     }
 }
